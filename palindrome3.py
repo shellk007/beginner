@@ -17,11 +17,15 @@ def palindrome():
     else:
         print ("Sorry this word isn't a palindrome :(")
   
-    re_play = raw_input("Want to play again (y/n)? ")
-  
+    while(1):  
+        re_play = raw_input("Want to play again (y/n)? ")
+        if re_play.lower() == "y" or re_play.lower() == "n":
+            break
+        else:
+            print "Wrong Choice!!! Please enter y/n"
     if re_play.lower() == "y":
         palindrome()
     else:
         print ('\nHave a nice day!')
   
-palindrome()   
+palindrome()
